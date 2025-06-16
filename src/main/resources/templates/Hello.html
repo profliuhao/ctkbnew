@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World! </title>
+    <!--    include vue.js-->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+</head>
+<body>
+
+  <div id="hello_msg">
+      <h2>{{msg}}Hello, welcome</h2>
+        <h2>Age: {{age}}</h2>
+      <input type="button" value="add 1" v-on:click="changeAge">
+      <input type="button" value="subtract 1" @click="subAge">
+      <input type="button" value="double age" @click="doubleAge">
+  </div>
+
+
+
+  <script>
+      const app = new Vue({
+          el: "#hello_msg",
+          data: {
+              msg: "this is Hao\n",
+              age: 23
+          },
+          methods:{
+              changeAge:function(){
+                  this.age = this.age+1;
+              },
+              subAge:function () {
+                  this.age--;
+              },
+              doubleAge(){
+                  this.age= this.age*2;
+              }
+          }
+      })
+  </script>
+
+</body>
+</html>

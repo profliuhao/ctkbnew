@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.haoai.medixhub.ctkb.dao.CoronavirusCriteriaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.haoai.medixhub.ctkb.entity.CoronavirusCriteria">
+        <id column="id" property="id" />
+        <result column="nct_id" property="nctId" />
+        <result column="nct_id_original" property="nctIdOriginal" />
+        <result column="pt_cohort" property="ptCohort" />
+        <result column="include" property="include" />
+        <result column="concept_id" property="conceptId" />
+        <result column="concept_name" property="conceptName" />
+        <result column="domain" property="domain" />
+        <result column="negation" property="negation" />
+        <result column="concept_group_id" property="conceptGroupId" />
+        <result column="start_index" property="startIndex" />
+        <result column="end_index" property="endIndex" />
+        <result column="entity_source_text" property="entitySourceText" />
+        <result column="temporal_source_text" property="temporalSourceText" />
+        <result column="before_days" property="beforeDays" />
+        <result column="numeric_source_text" property="numericSourceText" />
+        <result column="numeric_att_min" property="numericAttMin" />
+        <result column="numeric_att_max" property="numericAttMax" />
+        <result column="is_exclusion" property="isExclusion" />
+        <result column="to_display" property="toDisplay" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, nct_id, nct_id_original, pt_cohort, include, concept_id, concept_name, domain, negation, concept_group_id, start_index, end_index, entity_source_text, temporal_source_text, before_days, numeric_source_text, numeric_att_min, numeric_att_max, is_exclusion, to_display
+    </sql>
+
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.haoai.medixhub.ctkb.dao.CommonConditionMapper">
+    <cache-ref namespace="org.haoai.medixhub.ctkb.dao.CommonConditionMapper"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.haoai.medixhub.ctkb.entity.CommonCondition">
+        <result column="condition_concept_id" property="conditionConceptId" />
+        <result column="condition_concept_name" property="conditionConceptName" />
+        <result column="criteria_concept_id" property="criteriaConceptId" />
+        <result column="criteria_concept_name" property="criteriaConceptName" />
+        <result column="criteria_domain" property="criteriaDomain" />
+        <result column="include" property="include" />
+        <result column="concept_count" property="conceptCount" />
+        <result column="total_count" property="totalCount" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        condition_concept_id, condition_concept_name, criteria_concept_id, criteria_concept_name, criteria_domain, include, concept_count, total_count
+    </sql>
+
+</mapper>

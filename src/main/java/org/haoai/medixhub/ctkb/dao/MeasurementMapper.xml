@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.haoai.medixhub.ctkb.dao.MeasurementMapper">
+    <cache-ref namespace="org.haoai.medixhub.ctkb.dao.MeasurementMapper"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.haoai.medixhub.ctkb.entity.Measurement">
+        <id column="id" property="id" />
+        <result column="nctid" property="nctid" />
+        <result column="include" property="include" />
+        <result column="line_num" property="lineNum" />
+        <result column="concept_id" property="conceptId" />
+        <result column="concept_name" property="conceptName" />
+        <result column="domain" property="domain" />
+        <result column="neg" property="neg" />
+        <result column="start_index" property="startIndex" />
+        <result column="end_index" property="endIndex" />
+        <result column="temporal_source_text" property="temporalSourceText" />
+        <result column="entity_source_text" property="entitySourceText" />
+        <result column="score" property="score" />
+        <result column="beforedays" property="beforedays" />
+        <result column="afterdays" property="afterdays" />
+        <result column="numeric_source_text" property="numericSourceText" />
+        <result column="max" property="max" />
+        <result column="min" property="min" />
+        <result column="operate" property="operate" />
+        <result column="times" property="times" />
+        <result column="unit" property="unit" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, nctid, include, line_num, concept_id, concept_name, domain, neg, start_index, end_index, temporal_source_text, entity_source_text, score, beforedays, afterdays, numeric_source_text, max, min, operate, times, unit
+    </sql>
+
+</mapper>
